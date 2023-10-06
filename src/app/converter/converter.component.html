@@ -1,0 +1,12 @@
+<div class="weather-data layout-column align-items-center mt-50">
+
+    <section class="layout-row align-items-center justify-content-center">
+      <label>Celsius: </label>
+      <input type="number" class="large ml-30" placeholder="celsius" data-test-id="app-input" (input)="FahrConverter(celsious.value)" #celsious [value]="cels" />
+    </section>
+    <section class="layout-row align-items-center justify-content-center">
+        <label>Fahrenheit: </label>
+        <input type="number" class="large ml-30" placeholder="Fahrenheit" data-test-id="app-input" (input)="CelsConverter(fahrenheit.value)" #fahrenheit [value]="fahr" />
+    </section>
+
+</div>
