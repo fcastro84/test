@@ -9,16 +9,16 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./converter.component.scss']
 })
 export class ConverterComponent {
-cels = 0;
-fahr = 0;
+cels:number = 0;
+fahr:number = 0;
 
 FahrConverter(value: string){
-  this.fahr = (( parseInt(value) * 9) / 5) + 32;
+  this.fahr = Number(((( parseInt(value) * 9) / 5) + 32).toFixed(1));
   console.log('this.fahr', this.fahr)
 }
 
 CelsConverter(value: string){
-this.cels = (( parseInt(value) - 32) * 5) / 9;
+this.cels = Number((((parseInt(value) - 32) * 5) / 9).toFixed(1));
 console.log('this.cels', this.cels)
 }
 }
